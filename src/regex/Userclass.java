@@ -55,6 +55,18 @@ public class Userclass {
             System.out.println("Your Mobile Number " + mobileNo + " is Invalid");
         }
     }
+
+    public void passRule1(String passRule1) {
+        String regex = "^[A-Z]{1}[a-z]*@[0-9]*$";
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(passRule1);
+        boolean valid = matcher.matches();
+        if (valid == true) {
+            System.out.println("Your Passward " + passRule1 + " is Valid");
+        } else {
+            System.out.println("Your Passward " + passRule1 + " is Invalid");
+        }
+    }
 }
 
 
