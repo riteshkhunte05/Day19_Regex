@@ -79,8 +79,20 @@ public class Userclass {
             } else {
                 System.out.println("Your Passward " + passwordRule2 + " is Invalid");
             }
-        
-    }
+        }
+
+        public void passwordRule3(String passwordRule3) {
+            
+            String regex = "^(?=.*[A-Z]){1}(?=.*[a-z])(?=.*[0-9]).{8,}$";
+            Pattern pattern = Pattern.compile(regex);
+            Matcher matcher = pattern.matcher(passwordRule3);
+            boolean valid = matcher.matches();
+            if (valid == true) {
+                System.out.println("Your Password " + passwordRule3 + " is Valid");
+            } else {
+                System.out.println("Your Password " + passwordRule3 + " is Invalid");
+            }
+        }
 }
 
 
