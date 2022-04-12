@@ -93,6 +93,19 @@ public class Userclass {
                 System.out.println("Your Password " + passwordRule3 + " is Invalid");
             }
         }
+
+        public void passwordRule4(String passwordRule4) {
+            
+            String regex = "^(?=.*[A-Z]){1}(?=.*[a-z])(?=.*[0-9]).{9,}$";
+            Pattern pattern = Pattern.compile(regex);
+            Matcher matcher = pattern.matcher(passwordRule4);
+            boolean valid = matcher.matches();
+            if (valid == true) {
+                System.out.println("Your Password " + passwordRule4 + " is Valid");
+            } else {
+                System.out.println("Your Password " + passwordRule4 + " is Invalid");
+            }
+        }
 }
 
 

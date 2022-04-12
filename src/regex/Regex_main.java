@@ -11,5 +11,6 @@ public class Regex_main {
         user.passRule1("Pass@123");
         user.passwordRule2("PASS@123");
         user.passwordRule3("Ritesh@5");
+        user.passwordRule4("Hello@123");
     }
 }
