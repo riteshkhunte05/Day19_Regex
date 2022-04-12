@@ -41,6 +41,19 @@ public class Userclass {
         else{
             System.out.println("Your Email Address "+emailaddress+" is Invalid");
         }
+   
+    }
+
+    public void mobileNo(String mobileNo) {
+        String regex = "^[+][0-9]{2} [6-9]{1}[0-9]{9}$";
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(mobileNo);
+        boolean valid = matcher.matches();
+        if (valid == true) {
+            System.out.println("Your Mobile Number " + mobileNo + " is Valid");
+        } else {
+            System.out.println("Your Mobile Number " + mobileNo + " is Invalid");
+        }
     }
 }
 
