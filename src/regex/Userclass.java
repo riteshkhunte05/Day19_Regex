@@ -67,6 +67,20 @@ public class Userclass {
             System.out.println("Your Passward " + passRule1 + " is Invalid");
         }
     }
+   
+        public void passwordRule2(String passwordRule2) {
+        	
+            String regex = "^[A-Z]{4}[a-z]*@[0-9]*$";
+            Pattern pattern = Pattern.compile(regex);
+            Matcher matcher = pattern.matcher(passwordRule2);
+            boolean valid = matcher.matches();
+            if (valid == true) {
+                System.out.println("Your Passward " + passwordRule2 + " is Valid");
+            } else {
+                System.out.println("Your Passward " + passwordRule2 + " is Invalid");
+            }
+        
+    }
 }
 
 
