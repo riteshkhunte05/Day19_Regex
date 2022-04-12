@@ -6,5 +6,6 @@ public class Regex_main {
         Userclass user = new Userclass();
         user.firstName("Ritesh");
         user.lastName("Khunte");
+        user.emailaddress("riteshkhunte05@gmail.com");
     }
 }
