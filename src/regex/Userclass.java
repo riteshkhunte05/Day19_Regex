@@ -1,114 +1,119 @@
 package regex;
-
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Userclass {
-    public void firstName(String firstName){
-        String regex = "^[A-Z]{1}[a-z]{2,}$";
-        Pattern pattern = Pattern.compile(regex);
-        Matcher matcher = pattern.matcher(firstName);
-        boolean valid=matcher.matches();
-        if (valid==true){
-            System.out.println("Your name "+firstName+" is Valid");
-        }
-        else{
-            System.out.println("Your name "+firstName+" is Invalid");
-        }  
-    }
+	public void ValidName()
+	{
+			String line="Ritesh";
+			String pattern="[A-Z][a-z]*";
+			Pattern p=Pattern.compile(pattern);
+			Matcher matcher=p.matcher(line);
+			if(matcher.matches())
+			{
+				System.out.println("Pattern Match");
+			}
+			else {
+				System.out.println("No Match");
+				}
+		}
+	public void  LastName()
+	 {
+	        String line="Khunte";
+	        String pattern="[A-Z][a-z]*";
+	        Pattern p=Pattern.compile(pattern);
+	        Matcher matcher=p.matcher(line);
+	        if(matcher.matches())
+	        {
+		        System.out.println("Pattern Match");
+	        }
+	        else {
+		        System.out.println("No Match");
+		         }
+     }
+	       public void Email()
+	{
+		   String line="abc.xyz@bl.com.in";
+		   String pattern="[a-z \\. a-z]+[@][a-z]+\\.[a-z]{3}+\\.[a-z]{2}";
+		   Pattern p=Pattern.compile(pattern);
+	   	   Matcher matcher=p.matcher(line);
+		   if(matcher.matches())
+		   {
+		       System.out.println("Pattern Match");
+		   }
+		   else {
+		       System.out.println("No Match");
+			}
+	        }
+	public void Mobilenumb()
+	 {
+				String line="91 9168112901";
+				String pattern="[0-9]{2} [98]{1}[0-9]{9}";
+				Pattern p=Pattern.compile(pattern);
+				Matcher matcher=p.matcher(line);
+				if(matcher.matches())
+				{
+					System.out.println("Pattern Match");
+				}
+				else {
+					System.out.println("No Match");
+					}
 
-    public void lastName(String lastName){
-        String regex = "^[A-Z]{1}[a-z]{2,}$";
-        Pattern pattern = Pattern.compile(regex);
-        Matcher matcher = pattern.matcher(lastName);
-        boolean valid=matcher.matches();
-        if (valid==true){
-            System.out.println("Your Last name "+lastName+" is Valid");
-        }
-        else{
-            System.out.println("Your Last name "+lastName+" is Invalid");
-        }
-    }
-
-    public void emailaddress(String emailaddress){
-        String regex = "^[a-z0-9]{3,}+([_+-.][a-z0-9]{3,}+)*@[a-z0-9]+.[a-z]{2,3}+(.[a-z]{2,3}){0,1}$";
-        Pattern pattern = Pattern.compile(regex);
-        Matcher matcher = pattern.matcher(emailaddress);
-        boolean valid=matcher.matches();
-        if (valid==true){
-            System.out.println("Your Email Address "+emailaddress+" is Valid");
-        }
-        else{
-            System.out.println("Your Email Address "+emailaddress+" is Invalid");
-        }
-   
-    }
-
-    public void mobileNo(String mobileNo) {
-        String regex = "^[+][0-9]{2} [6-9]{1}[0-9]{9}$";
-        Pattern pattern = Pattern.compile(regex);
-        Matcher matcher = pattern.matcher(mobileNo);
-        boolean valid = matcher.matches();
-        if (valid == true) {
-            System.out.println("Your Mobile Number " + mobileNo + " is Valid");
-        } else {
-            System.out.println("Your Mobile Number " + mobileNo + " is Invalid");
-        }
-    }
-
-    public void passRule1(String passRule1) {
-        String regex = "^[A-Z]{1}[a-z]*@[0-9]*$";
-        Pattern pattern = Pattern.compile(regex);
-        Matcher matcher = pattern.matcher(passRule1);
-        boolean valid = matcher.matches();
-        if (valid == true) {
-            System.out.println("Your Passward " + passRule1 + " is Valid");
-        } else {
-            System.out.println("Your Passward " + passRule1 + " is Invalid");
-        }
-    }
-   
-        public void passwordRule2(String passwordRule2) {
-        	
-            String regex = "^[A-Z]{4}[a-z]*@[0-9]*$";
-            Pattern pattern = Pattern.compile(regex);
-            Matcher matcher = pattern.matcher(passwordRule2);
-            boolean valid = matcher.matches();
-            if (valid == true) {
-                System.out.println("Your Passward " + passwordRule2 + " is Valid");
-            } else {
-                System.out.println("Your Passward " + passwordRule2 + " is Invalid");
-            }
-        }
-
-        public void passwordRule3(String passwordRule3) {
-            
-            String regex = "^(?=.*[A-Z]){1}(?=.*[a-z])(?=.*[0-9]).{8,}$";
-            Pattern pattern = Pattern.compile(regex);
-            Matcher matcher = pattern.matcher(passwordRule3);
-            boolean valid = matcher.matches();
-            if (valid == true) {
-                System.out.println("Your Password " + passwordRule3 + " is Valid");
-            } else {
-                System.out.println("Your Password " + passwordRule3 + " is Invalid");
-            }
-        }
-
-        public void passwordRule4(String passwordRule4) {
-            
-            String regex = "^(?=.*[A-Z]){1}(?=.*[a-z])(?=.*[0-9]).{9,}$";
-            Pattern pattern = Pattern.compile(regex);
-            Matcher matcher = pattern.matcher(passwordRule4);
-            boolean valid = matcher.matches();
-            if (valid == true) {
-                System.out.println("Your Password " + passwordRule4 + " is Valid");
-            } else {
-                System.out.println("Your Password " + passwordRule4 + " is Invalid");
-            }
-        }
+			}
+	public void PasswordRule1()
+	 {
+		String line="pass";
+		String pattern="[a-z]{1,}";
+		Pattern p=Pattern.compile(pattern);
+		Matcher matcher=p.matcher(line);
+		if(matcher.matches())
+		{
+			System.out.println("Pattern Match");
+		}
+		else {
+			System.out.println("No Match");
+			}
+	}
+	public void PasswordRule2()
+	 {
+		String line="PASSword@123";
+		String pattern="^[A-Z]{4}[a-z]*@[0-9]*$";
+		Pattern p=Pattern.compile(pattern);
+		Matcher matcher=p.matcher(line);
+		if(matcher.matches())
+		{
+			System.out.println("Pattern Match");
+		}
+		else {
+			System.out.println("No Match");
+			}
 }
-
-
-
-
-
+	public void PasswordRule3()
+	 {
+		String line="Pass12";
+		String pattern="[A-Z]{1}[a-z]{1,}[0-9]{2}";
+		Pattern p=Pattern.compile(pattern);
+		Matcher matcher=p.matcher(line);
+		if(matcher.matches())
+		{
+			System.out.println("Pattern Match");
+		}
+		else {
+			System.out.println("No Match");
+			}
+}
+	public void PasswordRule4()
+	 {
+		String line="Pass@12";
+		String pattern="[A-Z]{1}[a-z]{1,}[@][0-9]{2}";
+		Pattern p=Pattern.compile(pattern);
+		Matcher matcher=p.matcher(line);
+		if(matcher.matches())
+		{
+			System.out.println("Pattern Match");
+		}
+		else {
+			System.out.println("No Match");
+			}
+}
+}
